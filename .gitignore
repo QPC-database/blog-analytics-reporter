@@ -1,0 +1,8 @@
+.idea/
+.vscode/
+env/
+venv/
+__pycache__
+
+key.json
+config.yml
