@@ -1,0 +1,15 @@
+version: "3.8"
+networks:
+  my-bridge:
+    external:
+      name: my-bridge
+services:
+  blog-analytics-reporter:
+    build: .
+    image: ixuewen/blog-analytics-reporter
+    container_name: blog-analytics-reporter-docker
+    restart: always
+    networks:
+      - my-bridge
+    volumes:
+      - /var/docker-volume/blog-analytics-reporter/data:/root/data:ro
