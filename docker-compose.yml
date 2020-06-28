@@ -12,4 +12,5 @@ services:
     networks:
       - my-bridge
     volumes:
+      - /etc/localtime:/etc/localtime:ro
       - /var/docker-volume/blog-analytics-reporter/data:/root/data:ro
